@@ -10,5 +10,5 @@ templates for making artificial grammar learning experiments using the jsPsych l
 Add anything you wish for here (tutorials, templates, etc)
 
 - how-to tutorials
-  - make edits to existing experiment templates
+  - how to make edits to existing experiment templates
   - how each of the templates work (where to store condition files, sounds, etc)
