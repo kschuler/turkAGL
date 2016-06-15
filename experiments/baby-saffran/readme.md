@@ -5,9 +5,9 @@ audio stimulus and then test them on what they have learned.  Experiments that
 fall into this category include statistical and distributional learning
 experiments such as:
 
-- Word-segmentation (saffran, hebrew, etc.)
-- QAXBR
-- Thompson & Newport
+- Word-segmentation (Saffran, Hebrew, etc.)
+- Category learning (QAXBR)
+- Phrase-structure learning (Thompson & Newport)
 
 
 There are two phases in this experiment:
