@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="../../libraries/jspsych-5.0.3/jspsych.js"></script>
+    <script src="../../libraries/jspsych-5.0.3/plugins/jspsych-instructions.js"></script>
+    <script src="../../libraries/jspsych-5.0.3/plugins/jspsych-single-audio.js"></script>
+    <script src="../../libraries/jspsych-5.0.3/plugins/jspsych-multi-stim-multi-response.js"></script>
+
+    <link href="../../libraries/jspsych-5.0.3/css/jspsych.css" rel="stylesheet" type="text/css"></link>
+  </head>
+  <body>
+  </body>
+  <script>
+
+  var instructs = {
+    type: 'instructions',
+    pages: [
+      'Welcome to the baby-saffran experiment. Click next to begin.',
+      'This is the second page of instructions.',
+      'This is the final page.'
+    ],
+    show_clickable_nav: true
+  }
+
+// # EXPOSURE -------------------------------------------------------
+// # plays a sound (or sounds) specified in conditions/exposure.csv
+// # file 
+// press spacebar when you see a blue circle on the screen
+  var exposure = {
+    type: 'single-audio',
+    stimulus: 'sounds/exposure-short.wav'
+  }
+
+
+
+
+  jsPsych.init({
+    timeline: [instructs, exposure],
+    on_finish: function(){ jsPsych.data.displayData(); }
+  });
+
+  </script>
+</html>
