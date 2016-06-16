@@ -1,6 +1,12 @@
+
+
 June 14, 2016
 - Created repository
 - Added 2 libraries
 	- jsPsych: main experiment generating library
 	- skeleton: boilerplate css (for making simple but pretty things)
-
+- Added an experiments folder (with templates)
+	- baby-saffran: for statistical learning experiments
+	- inconsistent-input: for artificial language learning experiments
+	- popsicle-sticks: for hierarchical structure (visuospatial)
+	- whack-a-mole: for SRT statistical learning experiments
