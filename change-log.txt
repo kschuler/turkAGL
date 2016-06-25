@@ -10,3 +10,6 @@ June 14, 2016
 	- inconsistent-input: for artificial language learning experiments
 	- popsicle-sticks: for hierarchical structure (visuospatial)
 	- whack-a-mole: for SRT statistical learning experiments
+June 16, 2016
+- Changed baby-saffran to stat-learning
+- Added papaparse for csv handling
