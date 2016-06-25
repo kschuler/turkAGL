@@ -3,6 +3,8 @@
   <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="../../libraries/jspsych-5.0.3/jspsych.js"></script>
+    <script src="../../libraries/PapaParse-4.1.2/papaparse.min.js"></script>
+
     <script src="../../libraries/jspsych-5.0.3/plugins/jspsych-instructions.js"></script>
     <script src="../../libraries/jspsych-5.0.3/plugins/jspsych-single-audio.js"></script>
     <script src="../../libraries/jspsych-5.0.3/plugins/jspsych-multi-stim-multi-response.js"></script>
@@ -10,9 +12,20 @@
     <link href="../../libraries/jspsych-5.0.3/css/jspsych.css" rel="stylesheet" type="text/css"></link>
   </head>
   <body>
+    <div id = "jspych-target"></div>
   </body>
   <script>
+  // # EXPERIMENT PARAMETERS -------------------------------------------------------------
+// var exposure_words = ['exposure-short']
+// var words = ['bikuti', 'tudaro', 'budopa', 'pigola']
+// var part_words = ['daropi', 'pabiku', 'golatu', 'tibudo']
+//
 
+//# CREATE TIMELINES
+
+
+
+// # INSTRUCTIONS
   var instructs = {
     type: 'instructions',
     pages: [
@@ -25,18 +38,29 @@
 
 // # EXPOSURE -------------------------------------------------------
 // # plays a sound (or sounds) specified in conditions/exposure.csv
-// # file 
+// # file
 // press spacebar when you see a blue circle on the screen
-  var exposure = {
-    type: 'single-audio',
-    stimulus: 'sounds/exposure-short.wav'
+  var exposure_block = [];
+    for(var i in exposure_words){
+      exposure_block.push({
+        // console.log(i),
+        type: 'single-audio',
+        stimulus: 'sounds/'+exposure_words[i]+'.wav'
+      });
   }
 
 
-
+  // # TEST -------------------------------------------------------
+  // # plays a sound (or sounds) specified in conditions/exposure.csv
+  // # file
+  // press spacebar when you see a blue circle on the screen
+    // var exposure = {
+    //   type: 'single-audio',
+    //   stimulus: 'sounds/exposure-short.wav'
+    // }
 
   jsPsych.init({
-    timeline: [instructs, exposure],
+    timeline: [instructs, exposure_block],
     on_finish: function(){ jsPsych.data.displayData(); }
   });
 
