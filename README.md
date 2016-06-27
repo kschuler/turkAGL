@@ -9,7 +9,7 @@ Visit the [turkAGL wiki][3] for documentation on how to use the turkAGL template
 - if you need help, please post your question on the [google group]()()
 
 ## Citations
-If you use these templates, you can thank Katie by making sure you cite the nice people who make the packages they rely on: [jsPsych][6] and [psiTurk][7].
+If you use these templates, please make sure you cite the nice people who make the packages they rely on: [jsPsych][6] and [psiTurk][7].
 
 #### jsPsych citation
 de Leeuw, J.R. (2015). jsPsych: A JavaScript library for creating behavioral experiments in a Web browser. *Behavior Research Methods*, 47(1), 1-12. doi:10.3758/s13428-014-0458-y
