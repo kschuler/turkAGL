@@ -19,11 +19,12 @@
 -->
 <html>
 	<head>
-		<title>Psychology Experiment</title>
+		<title>turkAGL template for statistical learning</title>
 		<link rel=stylesheet href="/static/css/skeleton.css" type="text/css">
 		<link href='https://fonts.googleapis.com/css?family=Raleway:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+		<link rel=stylesheet href="/static/css/style.css" type="text/css">
 		<style>
-			/* these tyles need to be defined locally */
+			/* these styles need to be defined locally */
 			body {
 			    padding:0px;
 			    margin: 0px;
@@ -78,10 +79,10 @@
 									are that you are at least 18 years old and are a fluent English
 									speaker.  The task will that XXXXX minutes and will pay XXXXX.
 							    </p>
-									<strong>This task can only be completed once.</strong>
+									<strong>This task can only be completed once.
 									If you have already completed this task before the system will not
 									allow you to run again. If this looks familiar please return the
-									HIT so someone else can participate.
+									HIT so someone else can participate.</strong>
 							    <p>
 								    Otherwise, please click the "Accept HIT" button on the Amazon site
 								    above to begin the task.
@@ -113,7 +114,7 @@
 							    		popup = window.open('{{ server_location }}/consent?hitId={{ hitid }}&assignmentId={{ assignmentid }}&workerId={{ workerid }}','Popup','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=no,width='+1024+',height='+768+'');
 							  		}
 							    </script>
-									<button type="button" class="button-primary" onClick="openwindow();"> Begin Experiment </button>
+									<button type="button" class="button button-primary" onClick="openwindow();"> Begin Experiment </button>
 
 
 
