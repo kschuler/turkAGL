@@ -5,8 +5,8 @@ Templates for making artificial grammar learning experiments using the [jsPsych]
 Visit the [turkAGL wiki][3] for documentation on how to use the turkAGL templates to run experiments on Amazon Mechanical Turk. 
 
 ## Issues and getting help
-- if you find a bug, please [create an issue]()(https://github.com/kschuler/turkAGL/issues)
-- if you need help, please post your question on the [google group]()()
+- if you find a bug, please [create an issue](https://github.com/kschuler/turkAGL/issues)
+- if you need help, please post your question on the [google group](https://groups.google.com/forum/#!forum/turkagl)
 
 ## Citations
 If you use these templates, please make sure you cite the nice people who make the packages they rely on: [jsPsych][6] and [psiTurk][7].
