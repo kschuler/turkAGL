@@ -13,6 +13,8 @@
         <!-- <script src="/static/js/jspsych/plugins/jspsych-text.js" type="text/javascript"></script> -->
         <script src="/static/js/jspsych/plugins/jspsych-instructions.js" type="text/javascript"></script>
         <script src="/static/js/jspsych/plugins/jspsych-single-audio.js" type="text/javascript"></script>
+        <script src="/static/js/jspsych/plugins/jspsych-survey-multi-choice.js" type="text/javascript"></script>
+
         <!-- <script src="/static/js/jspsych/plugins/jspsych-call-function.js" type="text/javascript"></script> -->
 
         <!-- get some info from the psiTurk server-->
@@ -48,6 +50,14 @@
         /* load psiturk */
         var psiturk = new PsiTurk(uniqueId, adServerLoc, mode);
 
+        // setup subject data
+        jsPsych.data.addProperties({
+            psiturk_mode: mode,
+            subject: uniqueId,
+            condition: "No seperate condition"
+          });
+
+
         /* exposure block */
         var exposure = {
           type: 'single-audio',
@@ -71,6 +81,23 @@
           ],
           randomize_order: true
         }
+
+        //END OF EXPERIMENT SURVEY
+        // defining groups of questions that will go together.
+        var demographic_questions = ["How old are you?", "Gender?"]
+
+        // definiting two different response scales that can be used.
+        var q1_choices = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
+        var q2_choices = ["Strongly Disagree", "Disagree", "Somewhat Disagree", "Neural", "Somewhat Agree", "Agree", "Strongly Agree"];
+
+        var multi_choice_block = {
+            type: 'survey-multi-choice',
+            questions: demographic_questions,
+            options: [q1_choices, q2_choices],  // need one scale for every question on a page
+            required: [true, false],  // set whether questions are required
+            // horizontal: true  // centres questions and makes options display horizontally
+            data: {phase: 'demographic' }
+        };
 
         /* instruction blocks */
         /* main / initial instructions */
@@ -161,7 +188,7 @@
 
         jsPsych.init({
             display_element: $('#jspsych-target'),
-            timeline: [instructions_overall, instructions_exposure, exposure, instructions_test, test],
+            timeline: [instructions_overall, instructions_exposure, exposure, instructions_test, test, multi_choice_block],
             on_finish: function() {
                 psiturk.saveData({
                     success: function() { psiturk.completeHIT(); }

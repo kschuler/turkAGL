@@ -1,0 +1,8 @@
+javascript for each type of task (as sample; no data collection involved)
+- word-segmentation-exp
+- whack-a-mole-exp
+- serial-reaction-time-exp
+- plural-morph-exp
+- category-learning-exp
+
+
